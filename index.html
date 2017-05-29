@@ -256,6 +256,13 @@
                 </li>
             </ul>-->
         </div>
+        <div class="container">
+            <div class="elevator-button">
+                <p>🚟</p>
+                <p>Subir en ascensor</p>
+            </div>
+        </div>
+
     </footer>
 
     <!-- jQuery -->
@@ -269,6 +276,7 @@
 
     <!-- Theme JavaScript -->
     <script src="js/new-age.min.js"></script>
+    <script src="js/elevator.min.js"></script>
 
     <!-- Twitter universal website tag code -->
     <script>
@@ -280,6 +288,17 @@
         twq('track','PageView');
     </script>
     <!-- End Twitter universal website tag code -->
+
+    <script>
+        // Elevator script included on the page, already.
+        window.onload = function() {
+            var elevator = new Elevator({
+                element: document.querySelector('.elevator-button'),
+                mainAudio: './music/elevator.mp3',
+                endAudio: './music/ding.mp3'
+            });
+        }
+    </script>
 
 </body>
 
